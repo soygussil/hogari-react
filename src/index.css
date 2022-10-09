@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+
+@layer base{
+    body{
+        @apply font-[Roboto]
+    }
+    li{
+        @apply p-4
+    }
+
+    h1, .logo{
+        @apply text-3xl font-bold md:text-4xl capitalize
+    }
+    h2{
+        @apply text-3xl font-bold
+    }
+    h3{
+        @apply text-xl font-bold
+    }
+}
