@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {
   FaReact, FaFacebook,
   FaTwitter,
@@ -12,11 +12,16 @@ import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 
 
 const NavBar = () => {
-
+  const [nav,setNav]=useState(false)
+  const [logo,setLogo]=useState(false)
+  const handleNav=()=>{
+    setNav(!nav)
+    setLogo(!logo)
+  }
   return (
 
-    <div className='flex justify-between items-center h-20 px-4  bg-neutral-200 rounded-2xl'>
-      <div className="flex">
+    <div className='flex w-full justify-between items-center h-32 px-4 backdrop-blur-sm md:absolute bg-white/70  z-10 rounded-b-md'>
+      <div onClick={handleNav} className={logo?'hidden':'block flex'}>
         <FaReact className='logo' />
         <h1>Hogari.</h1>
       </div>
@@ -28,36 +33,40 @@ const NavBar = () => {
       </ul>
       <div>
         <ul className='hidden md:flex'>
-          <li className='flex'>Iniciar Sesión <AiOutlineUserAdd size={20} className=' ml-1' /> </li>
-          <li className='flex'>Únete <FiLogIn size={20} className='ml-1' /> </li>
+          <li className='flex'>Iniciar Sesión </li>
+          <li className='flex  bg-[#03364D] hover:bg-[#BF6900] text-white rounded-xl px-8'>Únete <FiLogIn size={20} className='ml-1 mt-1' /> </li>
         </ul>
       </div>
 
 
 {/* Botón hamburguesa */}
-      <div className="md:hidden">
-        <HiOutlineMenuAlt4 size={20} />
+      <div onClick={handleNav} className="md:hidden z-10">
+        {nav? <AiOutlineClose className='text-black' size={20}/>:<HiOutlineMenuAlt4 size={20} />}
+        
       </div>
     {/* Menú de mobil */}
-      <div className='absolute left-0'>
+      <div onClick={handleNav} className={nav ? 'absolute left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col':'absolute left-[-100%]'}>
         <ul>
+          <div className='flex justify-between'>
           <FaReact className='logo' />
           <h1>Hogari.</h1>
-          <li>Inicio</li>
-          <li>Productos</li>
-          <li>Contáctanos</li>
-          <li>Acerca de nosotros</li>
-          <div>
-            <button>Iniciar Sesión</button>
-            <button>Únete</button>
-            <div className="">
+          </div>
+          <li className='border-b'>Inicio</li>
+          <li className='border-b'>Productos</li>
+          <li className='border-b'>Contáctanos</li>
+          <li className='border-b'>Acerca de nosotros</li>
+          <div className='flex flex-col'>
+            <button className='my-2'>Iniciar Sesión</button>
+            <button className='my-2'>Únete</button>
+          </div>
+            <div className="flex justify-between my-6">
               <FaFacebook className='icon' />
               <FaTwitter className='icon' />
               <FaYoutube className='icon' />
               <FaPinterest className='icon' />
               <FaInstagram className='icon' />
             </div>
-          </div>
+
         </ul>
       </div>
 

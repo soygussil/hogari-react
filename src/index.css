@@ -6,20 +6,45 @@
 
 
 @layer base{
+
+    :root{
+        --color-primario:#03364D;
+        --color-secundario:#FFF;
+    
+        --color-fuente:#000;
+        --color-resaltar:#BF6900;
+        --primary-dark:#5651e5;
+        --primary-light:#709dff;
+    }
+
+    .icon{
+        color:var(--color-primario)
+    }
+
     body{
         @apply font-[Roboto]
     }
     li{
-        @apply p-4
+        @apply p-4 
     }
 
     h1, .logo{
         @apply text-3xl font-bold md:text-4xl capitalize
     }
     h2{
-        @apply text-3xl font-bold
+        @apply text-3xl py-4
     }
     h3{
         @apply text-xl font-bold
     }
+
+    button{
+        @apply p-3 border bg-[#03364D] rounded-xl text-white hover:bg-[#BF6900]
+    }
+
+    .icon{
+        @apply text-2xl cursor-pointer flex hover:text-[#BF6900] 
+    }
+
+
 }
