@@ -1,4 +1,5 @@
 import React from 'react'
+import Ciudades from './components/Ciudades'
 import Hero from './components/Hero'
 import NavBar from './components/NavBar'
 const style={
@@ -9,6 +10,7 @@ const App = () => {
     <div className={style.bg}>
       <NavBar/>
       <Hero/>
+      <Ciudades/>
     </div>
     
   )

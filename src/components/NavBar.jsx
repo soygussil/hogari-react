@@ -9,6 +9,7 @@ import {
 import { AiOutlineUserAdd, AiOutlineClose } from 'react-icons/Ai'
 import { FiLogIn } from 'react-icons/fi'
 import { HiOutlineMenuAlt4 } from 'react-icons/hi'
+import {MdLocationCity} from 'react-icons/md'
 
 
 const NavBar = () => {
@@ -20,11 +21,14 @@ const NavBar = () => {
   }
   return (
 
-    <div className='flex w-full justify-between items-center h-32 px-4 backdrop-blur-sm md:absolute bg-white/70  z-10 rounded-b-md'>
-      <div onClick={handleNav} className={logo?'hidden':'block flex'}>
-        <FaReact className='logo' />
-        <h1>Hogari.</h1>
+    <div className='flex sticky top-0 w-full justify-between items-center h-32 px-4 backdrop-blur-sm  bg-white/70  z-10 rounded-b-md'>
+      <a href="/">
+      <div className={logo?'hidden':'block flex'}>
+        <MdLocationCity size={40} className='logo text-sky-800'  />
+        <h1 className='text-amber-400 drop-shadow  '>H<span className='uppercase text-sky-800 '>ogari.</span></h1>
       </div>
+      </a>
+
       <ul className='hidden md:flex '>
         <li>Inicio</li>
         <li>Productos</li>
@@ -45,11 +49,11 @@ const NavBar = () => {
         
       </div>
     {/* Menú de mobil */}
-      <div onClick={handleNav} className={nav ? 'absolute left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col':'absolute left-[-100%]'}>
+      <div className={nav ? 'absolute left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col':'absolute left-[-100%]'}>
         <ul>
-          <div className='flex justify-between'>
-          <FaReact className='logo' />
-          <h1>Hogari.</h1>
+          <div className=' flex justify-center'>
+          <MdLocationCity className='logo text-sky-800'  />
+        <h1 className='text-amber-400 drop-shadow '>H<span className='uppercase text-sky-800 '>ogari.</span></h1>
           </div>
           <li className='border-b'>Inicio</li>
           <li className='border-b'>Productos</li>
@@ -59,7 +63,7 @@ const NavBar = () => {
             <button className='my-2'>Iniciar Sesión</button>
             <button className='my-2'>Únete</button>
           </div>
-            <div className="flex justify-between my-6">
+            <div className="flex s my-6">
               <FaFacebook className='icon' />
               <FaTwitter className='icon' />
               <FaYoutube className='icon' />
