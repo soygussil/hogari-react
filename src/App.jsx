@@ -1,4 +1,5 @@
 import React from 'react'
+import CambiaVida from './components/CambiaVida'
 import Ciudades from './components/Ciudades'
 import Hero from './components/Hero'
 import NavBar from './components/NavBar'
@@ -11,6 +12,7 @@ const App = () => {
       <NavBar/>
       <Hero/>
       <Ciudades/>
+      <CambiaVida/>
     </div>
     
   )

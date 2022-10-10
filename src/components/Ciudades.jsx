@@ -45,8 +45,9 @@ const Ciudades = () => {
     return (
         <div className='max-w-[1240px] mx-auto py-16 px-4'>
 
-            <h2 className='text-center'>Nuestras Ubicaciones</h2>
-            <p className='text-center'>Nos encontramos en las siguientes ciudades:</p>
+            <h2 className='text-center text-4xl font-bold'>Nuestras Ubicaciones</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsa suscipit dolorem delectus repellat vitae rerum nulla reiciendis molestias error, tempore nobis et distinctio ea culpa! Hic exercitationem incidunt iure.</p>
+            <p className='text-center font-bold text-xl py-2'>Nos encontramos en las siguientes ciudades:</p>
             <div className='py-6 text-center text-2xl'>
                 <Slider {...settings}>
                     <div className='shadow-xl  transition ease-in-out delay-150 bg-slate-100 hover:-translate-y-1 hover:scale-110 hover:bg-slate-200 duration-300 border-8 border-slate-200 ml-3'>
