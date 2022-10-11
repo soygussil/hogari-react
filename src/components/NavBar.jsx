@@ -1,12 +1,12 @@
 import React,{useState} from 'react'
 import {
-  FaReact, FaFacebook,
+  FaFacebook,
   FaTwitter,
   FaYoutube,
   FaPinterest,
   FaInstagram
 } from 'react-icons/fa';
-import { AiOutlineUserAdd, AiOutlineClose } from 'react-icons/Ai'
+import { AiOutlineClose } from 'react-icons/Ai'
 import { FiLogIn } from 'react-icons/fi'
 import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import {MdLocationCity} from 'react-icons/md'
