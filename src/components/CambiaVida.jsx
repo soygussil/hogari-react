@@ -11,11 +11,10 @@ const CambiaVida = () => {
     <div className="md:flex flex-row">
 
         <div className="basis-2/4">
-            <p>
             <Fade direction='left' delay={100}>
             <img className='rounded-xl' src={casa} alt="casa" />
             </Fade>
-            </p>
+
             </div>
         <div className="basis-1/1 p-3">
             <p>

@@ -23,7 +23,8 @@ const NavBar = () => {
 
     <div className='flex sticky top-0 w-full justify-between items-center h-32 px-4 backdrop-blur-sm  bg-white/70  z-10 rounded-b-md'>
       <a href="/">
-      <div className={logo?'hidden':'block flex'}>
+      {/* <div className={logo?'hidden':'block flex'}> */}
+      <div className={logo?'hidden':' block'}>
         <MdLocationCity size={40} className='logo text-sky-800'  />
         <h1 className='text-amber-400 drop-shadow  '>H<span className='uppercase text-sky-800 '>ogari.</span></h1>
       </div>
