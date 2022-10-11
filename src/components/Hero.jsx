@@ -1,5 +1,5 @@
 import React from 'react'
-// import { AiOutlineSearch } from 'react-icons/Ai'
+import { AiOutlineSearch } from 'react-icons/Ai'
 import fondo from '../assets/img/living2.jpg'
 
 const Hero = () => {
@@ -16,8 +16,8 @@ const Hero = () => {
                     <input className='bg-transparent w-[200px] sm:w-[400px] font-[Roboto] focus:outline-none' type="text" name="" id="" placeholder='¿Que deseas buscar?' />
                 </div>
                 <div>
-                {/* <button><AiOutlineSearch size={20} className='icon' style={{color:'#ffff'}} /></button> */}
-                <button>Buscar</button>
+                <button><AiOutlineSearch size={20} className='icon' style={{color:'#ffff'}} /></button>
+                
                 </div>
             </form>
         </div>
