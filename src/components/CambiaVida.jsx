@@ -3,8 +3,8 @@ import casa from '../assets/img/casa.jpg'
 import { Fade } from "react-awesome-reveal";
 const CambiaVida = () => {
   return (
-    
-  <div className="container mx-auto">
+    <div className=' bg-[#022230] text-white h-[1000px] md:h-[500px]'>
+  <div className="container mx-auto py-10">
             <p className='text-center py-2 text-5xl font-bold'>
             Cambia tu vida
            </p>
@@ -23,6 +23,7 @@ const CambiaVida = () => {
             </p>
         </div>
     </div>
+  </div>
   </div>
   )
 }
